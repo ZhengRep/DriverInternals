@@ -1,0 +1,19 @@
+﻿  Building 'HelloDDK' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Debug\HelloDDK.inf
+  Stamping [Version] section with DriverVer=03/20/2022,20.53.12.489
+  HelloDDK.vcxproj -> E:\Vstudio2019\DriverInternals\x64\Debug\HelloDDK.sys
+  Driver is a Universal Driver.
+  .........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  E:\Vstudio2019\DriverInternals\x64\Debug\HelloDDK\helloddk.cat
+  Done Adding Additional Store
+  Successfully signed: E:\Vstudio2019\DriverInternals\x64\Debug\HelloDDK\helloddk.cat
+  
