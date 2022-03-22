@@ -1,19 +1,16 @@
 ﻿  Building 'HelloDDK' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
   Stamping x64\Debug\HelloDDK.inf
-  Stamping [Version] section with DriverVer=03/20/2022,20.53.12.489
-  HelloDDK.vcxproj -> E:\Vstudio2019\DriverInternals\x64\Debug\HelloDDK.sys
-  Driver is a Universal Driver.
-  .........................
-  Signability test complete.
-  
-  Errors:
-  None
-  
-  Warnings:
-  None
-  
-  Catalog generation complete.
-  E:\Vstudio2019\DriverInternals\x64\Debug\HelloDDK\helloddk.cat
-  Done Adding Additional Store
-  Successfully signed: E:\Vstudio2019\DriverInternals\x64\Debug\HelloDDK\helloddk.cat
-  
+  Stamping [Version] section with DriverVer=03/22/2022,17.12.51.476
+  HelloDDK.cpp
+E:\Vstudio2019\DriverInternals\HelloWDM\HelloWDM.h(16,34): error C2011: “_DEVICE_EXTENSION”:“struct”类型重定义
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.h(22): message : 参见“_DEVICE_EXTENSION”的声明
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.cpp(39,55): error C2027: 使用了未定义类型“_DEVICE_EXTENSION”
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.h(22): message : 参见“_DEVICE_EXTENSION”的声明
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.cpp(43,40): error C2027: 使用了未定义类型“_DEVICE_EXTENSION”
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.h(22): message : 参见“_DEVICE_EXTENSION”的声明
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.cpp(85,21): error C2027: 使用了未定义类型“_DEVICE_EXTENSION”
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.h(22): message : 参见“_DEVICE_EXTENSION”的声明
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.cpp(86,21): error C2027: 使用了未定义类型“_DEVICE_EXTENSION”
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.h(22): message : 参见“_DEVICE_EXTENSION”的声明
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.cpp(91,21): error C2027: 使用了未定义类型“_DEVICE_EXTENSION”
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.h(22): message : 参见“_DEVICE_EXTENSION”的声明

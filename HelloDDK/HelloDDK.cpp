@@ -1,10 +1,12 @@
 #include "HelloDDK.h"
+#include "..\HelloWDM\HelloWDM.h"
 
 #pragma INITCODE
 extern "C" NTSTATUS DriverEntry(IN PDRIVER_OBJECT pDriverObject, IN UNICODE_STRING pRegisterPath)
 {
     UNREFERENCED_PARAMETER(pRegisterPath);
 
+    DbgPrint("HelloDDK, DbgPrint\n");
     KdPrint(("HelloDDK:Enter DriverEntry.\n"));
     NTSTATUS status;
 
@@ -23,6 +25,7 @@ extern "C" NTSTATUS DriverEntry(IN PDRIVER_OBJECT pDriverObject, IN UNICODE_STRI
     return status;
 }
 
+
 #pragma PAGEDCODE
 VOID HelloDDKUnload(IN PDRIVER_OBJECT pDriverObject)
 {
@@ -37,7 +40,7 @@ VOID HelloDDKUnload(IN PDRIVER_OBJECT pDriverObject)
         IoDeleteSymbolicLink(&ustrLinkName);
         //Delete device
         pNextDeviceObject = pNextDeviceObject->NextDevice;
-        IoDeleteDevice(pDeviceExtObject->pDeviceObject);
+        IoDeleteDevice(pDeviceExtObject->pFdo);
     }
 
     KdPrint(("HelloDDKUnload End.\n"));
@@ -79,7 +82,7 @@ NTSTATUS CreateDevice(IN PDRIVER_OBJECT pDriverObject)
         return status;
 
     pDeviceObject->Flags |= DO_BUFFERED_IO;
-    pDeviceExtObject->pDeviceObject = pDeviceObject;
+    pDeviceExtObject->pFdo = pDeviceObject;
     pDeviceExtObject->ustrDeviceName = ustrDeviceName;
 
     //Create SymLink
