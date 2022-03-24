@@ -204,7 +204,7 @@ VOID LookasideTest()
 	ExInitializeLookasideListEx(&pageLookasideList, NULL, NULL, NonPagedPool, 0, 1024, 0, 0);
 
 #define ARRAYNUMBER 15
-	PMYDATASTRUCT MyBufferArray[ARRAYNUMBER];
+	PMYBUFFERBLOCK MyBufferArray[ARRAYNUMBER];
 
 	//Simulation of allcate memory frenquntly
 	for (int i = 0; i < 15; i++)
