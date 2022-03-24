@@ -169,3 +169,55 @@ VOID OperateFileAttributes()
 
 	ZwClose(hFile);
 }
+
+#pragma INITCODE
+VOID ListEntryTest()
+{
+	LIST_ENTRY listEntryHead;
+	InitializeListHead(&listEntryHead);
+
+	PMYDATASTRUCT pMyData;
+	//Insert
+	KdPrint(("Start to Insert Entry."));
+	for (int i = 0; i < 10; i++)
+	{
+		pMyData = (PMYDATASTRUCT)ExAllocatePool(NonPagedPool, sizeof(MYDATASTRUCT));
+		pMyData->id = i;
+		InsertHeadList(&listEntryHead, &(pMyData->ListEntry));
+	}
+
+	//Remove
+	KdPrint(("Remove and show Entry id."));
+	while (!IsListEmpty(&listEntryHead))
+	{
+		PLIST_ENTRY pEntry = RemoveTailList(&listEntryHead);
+		PMYDATASTRUCT pMyData = CONTAINING_RECORD(pEntry, MYDATASTRUCT, ListEntry);
+		KdPrint(("MyData id is %u.\n", pMyData->id));
+		ExFreePool(pMyData);
+	}
+}
+
+#pragma INITCODE
+VOID LookasideTest()
+{
+	PAGED_LOOKASIDE_LIST pageLookasideList;
+	ExInitializeLookasideListEx(&pageLookasideList, NULL, NULL, NonPagedPool, 0, 1024, 0, 0);
+
+#define ARRAYNUMBER 15
+	PMYDATASTRUCT MyBufferArray[ARRAYNUMBER];
+
+	//Simulation of allcate memory frenquntly
+	for (int i = 0; i < 15; i++)
+	{
+		MyBufferArray[i] = (PMYBUFFERBLOCK)ExAllocateFromPagedLookasideList(&pageLookasideList);
+	}
+
+	//Free momery
+	for (int i = 0; i < 15; i++)
+	{
+		ExFreeToPagedLookasideList(&pageLookasideList, MyBufferArray[i]);
+		MyBufferArray[i] = NULL;
+	}
+
+	ExDeletePagedLookasideList(&pageLookasideList);
+}
