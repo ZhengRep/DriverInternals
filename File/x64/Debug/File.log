@@ -1,0 +1,18 @@
+﻿  Building 'File' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping x64\Debug\File.inf
+  Stamping [Version] section with DriverVer=03/24/2022,20.29.33.554
+  File.vcxproj -> E:\Vstudio2019\DriverInternals\x64\Debug\File.sys
+  .........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  E:\Vstudio2019\DriverInternals\x64\Debug\File\file.cat
+  Done Adding Additional Store
+  Successfully signed: E:\Vstudio2019\DriverInternals\x64\Debug\File\file.cat
+  

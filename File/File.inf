@@ -1,5 +1,5 @@
 ;
-; HelloWDM.inf
+; File.inf
 ;
 
 [Version]
@@ -7,8 +7,8 @@ Signature="$WINDOWS NT$"
 Class=System
 ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider=%ManufacturerName%
-DriverVer = 03/24/2022,20.1.6.874
-CatalogFile=HelloWDM.cat
+DriverVer=
+CatalogFile=File.cat
 
 [DestinationDirs]
 DefaultDestDir = 12
@@ -21,12 +21,12 @@ DefaultDestDir = 12
 
 
 [Manufacturer]
-%ManufacturerName%=Standard,NTamd64
+%ManufacturerName%=Standard,NT$ARCH$
 
-[Standard.NTamd64]
+[Standard.NT$ARCH$]
 
 
 [Strings]
 ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
 ClassName=""
-DiskName="HelloWDM Source Disk"
+DiskName="File Source Disk"

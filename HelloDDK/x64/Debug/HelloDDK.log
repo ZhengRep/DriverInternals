@@ -1,7 +1,10 @@
 ﻿  Building 'HelloDDK' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
   Stamping x64\Debug\HelloDDK.inf
-  Stamping [Version] section with DriverVer=03/22/2022,17.12.51.476
+  Stamping [Version] section with DriverVer=03/24/2022,20.1.5.522
   HelloDDK.cpp
+E:\Vstudio2019\DriverInternals\HelloWDM\HelloWDM.h(14,1): error C2220: 以下警告被视为错误
+E:\Vstudio2019\DriverInternals\HelloWDM\HelloWDM.h(14,1): warning C4005: “arraysize”: 宏重定义
+E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.h(20): message : 参见“arraysize”的前一个定义
 E:\Vstudio2019\DriverInternals\HelloWDM\HelloWDM.h(16,34): error C2011: “_DEVICE_EXTENSION”:“struct”类型重定义
 E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.h(22): message : 参见“_DEVICE_EXTENSION”的声明
 E:\Vstudio2019\DriverInternals\HelloDDK\HelloDDK.cpp(39,55): error C2027: 使用了未定义类型“_DEVICE_EXTENSION”

@@ -1,12 +1,12 @@
 ﻿  Building 'HelloWDM' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
   Stamping x64\Debug\HelloWDM.inf
-  Stamping [Version] section with DriverVer=03/22/2022,19.10.11.78
+  Stamping [Version] section with DriverVer=03/24/2022,20.1.6.874
   HelloWDM.cpp
   HelloWDM.vcxproj -> E:\Vstudio2019\DriverInternals\x64\Debug\HelloWDM.sys
   Done Adding Additional Store
   Successfully signed: E:\Vstudio2019\DriverInternals\x64\Debug\HelloWDM.sys
   
-  .........................
+  ........................
   Signability test complete.
   
   Errors:

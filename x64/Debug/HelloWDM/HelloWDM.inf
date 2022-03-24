@@ -7,7 +7,7 @@ Signature="$WINDOWS NT$"
 Class=System
 ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider=%ManufacturerName%
-DriverVer = 03/22/2022,19.10.11.78
+DriverVer = 03/24/2022,20.1.6.874
 CatalogFile=HelloWDM.cat
 
 [DestinationDirs]
